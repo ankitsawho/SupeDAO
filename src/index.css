@@ -4,9 +4,11 @@ body {
   font-family: Inter, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #7700ee;
-  color: #fff;
   overflow-x: hidden;
+  background: #000428;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
 }
 #root {
   min-height: 100vh;
@@ -15,10 +17,18 @@ body {
 
 h1 {
   font-size: 5rem;
+
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 15px #fff,
+    0 0 42px rgb(0, 106, 255),
+    0 0 82px rgb(47, 0, 255);
 }
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 3rem;
+    color: #fff;
   }
 }
 
@@ -114,28 +124,7 @@ h1 {
   box-shadow: 3.1px 6.2px 6.2px hsl(0deg 0% 0% / 0.4);
 }
 
-button {
-  cursor: pointer;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  font-weight: bold;
-  font-family: inherit;
-  padding: 1.2rem 2rem;
-  text-transform: uppercase;
-  border-radius: 3rem;
-  font-size: 1.2rem;
-}
-
-button:hover {
-  background-color: #121212;
-}
-
-button:focus {
-  background-color: #222;
-}
-
-button:disabled {
-  opacity: 0.8;
-  pointer-events: none;
+.btn-hero{
+  font-size: 1.5rem !important;
+  color: aliceblue !important;
 }
